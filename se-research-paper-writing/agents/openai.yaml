@@ -1,0 +1,4 @@
+interface:
+  display_name: "SE Research Paper Writing"
+  short_description: "Software engineering paper writing and reviewer-facing refinement"
+  default_prompt: "Use $se-research-paper-writing to improve my software engineering research paper for a top SE venue."

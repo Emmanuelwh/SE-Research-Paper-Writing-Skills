@@ -1,84 +1,66 @@
-# Skills: Research Paper Writing
+# Skills: SE Research Paper Writing
 
-> 重要归属说明
-> 本仓库中的大部分写作经验与方法论来自彭思达老师公开的学习笔记：
-> https://pengsida.notion.site/c1a22465a0fa4b15a12985223916048e
-> 彭老师原始仓库：
-> https://github.com/pengsida/learning_research
-> 衷心感谢彭思达老师把这些宝贵经验公开分享出来。
-> 我主要做了资料整理、结构化适配，以及 Skills 封装。
+本仓库提供一套面向软件工程研究论文写作的 Skill：
 
-## 仓库介绍
+- `se-research-paper-writing/`
+  - `SKILL.md`：核心工作流、使用规则和输出格式
+  - `references/`：按章节拆分的软件工程论文写作指南
+  - `agents/openai.yaml`：Codex 展示元信息
 
-当前仓库提供 1 个技能包：
+## 适用对象
 
-- `research-paper-writing/`
-  - `SKILL.md`：核心流程与使用规则
-  - `references/`：按章节拆分的写作指南与模板
-  - `agents/openai.yaml`：Agent 元信息
+该 Skill 面向准备投稿软件工程顶会/顶刊的作者，例如 ICSE、FSE、ASE、ISSTA、MSR、SANER、ICSME、TSE、TOSEM、EMSE、JSS 等。
 
-常见使用场景：
+## 典型用途
 
-- 撰写或重写 Abstract / Introduction / Method / Experiments / Conclusion
-- 改善段落衔接与章节逻辑
-- 做 claim-evidence 对齐检查
-- 提交前从 reviewer 视角进行自审
+- 撰写或重写 Abstract、Introduction、Related Work、Methodology、Evaluation、Threats to Validity
+- 设计 Research Questions，并建立 contribution-evidence map
+- 检查论文中的 claim 是否被实验、实证数据、用户研究或案例研究支撑
+- 按 reviewer 视角做投稿前自审
+- 改善段落流畅性、术语一致性和审稿人可读性
 
 ## 安装方式
 
-以下命令默认在仓库根目录执行。
+假设当前在仓库根目录。
 
-### 1) Codex
+### Codex
 
-将技能复制到 `$CODEX_HOME/skills/`：
+复制 Skill 到 `$CODEX_HOME/skills/`：
 
 ```bash
 mkdir -p "$CODEX_HOME/skills"
-cp -R research-paper-writing "$CODEX_HOME/skills/"
+cp -R se-research-paper-writing "$CODEX_HOME/skills/"
 ```
 
 使用示例：
 
 ```text
-Use $research-paper-writing to improve my paper's Introduction.
+Use $se-research-paper-writing to improve my ICSE paper introduction.
 ```
 
-### 2) CC（Claude Code）
-
-可选择全局安装或项目级安装。
+### Claude Code
 
 全局安装：
 
 ```bash
 mkdir -p "$HOME/.claude/skills"
-cp -R research-paper-writing "$HOME/.claude/skills/"
+cp -R se-research-paper-writing "$HOME/.claude/skills/"
 ```
 
 项目级安装：
 
 ```bash
 mkdir -p .claude/skills
-cp -R research-paper-writing .claude/skills/
+cp -R se-research-paper-writing .claude/skills/
 ```
 
-使用时建议在提示词中显式指定，例如：`Please use the research-paper-writing skill`。
-
-### 3) Gemini
-
-可将该技能复制到 Gemini 的技能目录：
+### Gemini
 
 ```bash
 mkdir -p "$HOME/.gemini/skills"
-cp -R research-paper-writing "$HOME/.gemini/skills/"
+cp -R se-research-paper-writing "$HOME/.gemini/skills/"
 ```
-
-随后在 Gemini 中直接给出具体任务（例如：重写 Abstract 并做 claim-evidence 检查）。
-
-## 致谢
-
-再次说明：仓库核心知识来源于彭思达老师公开笔记；我主要负责整理与 Skills 化适配。
-彭老师原始仓库：https://github.com/pengsida/learning_research
 
 ## 许可证
 
-本项目采用 MIT License，详见 [LICENSE](./LICENSE)。
+本项目采用 MIT License。详见 [LICENSE](./LICENSE)。

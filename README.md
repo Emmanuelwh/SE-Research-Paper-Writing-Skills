@@ -1,85 +1,67 @@
-# Skills: Research Paper Writing
+# Skills: SE Research Paper Writing
 
 [中文介绍](./README_zh.md).
 
-> Important Attribution
-> Most writing knowledge and methodology in this repository comes from Prof. Peng Sida (彭思达)'s open study notes:
-> https://pengsida.notion.site/c1a22465a0fa4b15a12985223916048e
-> Prof. Peng's original repository:
-> https://github.com/pengsida/learning_research
-> I sincerely thank Prof. Peng for openly sharing these valuable experiences.
-> My contribution is organization, structured adaptation, and packaging as reusable Skills.
+This repository provides one Codex-compatible skill package for software engineering research paper writing:
 
-## Repository Overview
+- `se-research-paper-writing/`
+  - `SKILL.md`: core workflow, usage rules, and output contract
+  - `references/`: section-specific writing guides for SE papers
+  - `agents/openai.yaml`: UI metadata
 
-This repository currently provides one skill package:
+## Intended Users
 
-- `research-paper-writing/`
-  - `SKILL.md`: core workflow and usage rules
-  - `references/`: section-specific writing guides and templates
-  - `agents/openai.yaml`: agent metadata
+Use this skill when preparing papers for software engineering conferences and journals such as ICSE, FSE, ASE, ISSTA, MSR, SANER, ICSME, TSE, TOSEM, EMSE, and JSS.
 
-Typical use cases:
+## Typical Use Cases
 
-- Drafting or rewriting Abstract / Introduction / Method / Experiments / Conclusion
-- Improving paragraph flow and section logic
-- Checking claim-evidence alignment
-- Running pre-submission self-review from a reviewer mindset
+- Drafting or rewriting Abstract, Introduction, Related Work, Methodology, Evaluation, and Threats to Validity
+- Designing research questions and contribution-evidence maps
+- Checking whether claims are supported by experiments, empirical data, user studies, or case studies
+- Reviewing a paper from a skeptical SE reviewer perspective before submission
+- Improving paragraph flow, terminology consistency, and reviewer-facing presentation
 
 ## Installation
 
 Assume you are in the repository root.
 
-### 1) Codex
+### Codex
 
 Copy the skill into `$CODEX_HOME/skills/`:
 
 ```bash
 mkdir -p "$CODEX_HOME/skills"
-cp -R research-paper-writing "$CODEX_HOME/skills/"
+cp -R se-research-paper-writing "$CODEX_HOME/skills/"
 ```
 
 Usage example:
 
 ```text
-Use $research-paper-writing to improve my paper's Introduction.
+Use $se-research-paper-writing to improve my ICSE paper introduction.
 ```
 
-### 2) CC (Claude Code)
-
-Use either a global or project-level installation.
+### Claude Code
 
 Global:
 
 ```bash
 mkdir -p "$HOME/.claude/skills"
-cp -R research-paper-writing "$HOME/.claude/skills/"
+cp -R se-research-paper-writing "$HOME/.claude/skills/"
 ```
 
 Project-level:
 
 ```bash
 mkdir -p .claude/skills
-cp -R research-paper-writing .claude/skills/
+cp -R se-research-paper-writing .claude/skills/
 ```
 
-In prompts, explicitly request this skill, for example: `Please use the research-paper-writing skill`.
-
-### 3) Gemini
-
-Copy this skill into your Gemini skills directory:
+### Gemini
 
 ```bash
 mkdir -p "$HOME/.gemini/skills"
-cp -R research-paper-writing "$HOME/.gemini/skills/"
+cp -R se-research-paper-writing "$HOME/.gemini/skills/"
 ```
-
-Then ask concrete tasks in Gemini (for example, rewriting an Abstract with claim-evidence checks).
-
-## Credits
-
-Again, this repository is primarily based on Prof. Peng Sida (彭思达)'s open notes, while my work focuses on curation and Skills adaptation.
-Prof. Peng's original repository: https://github.com/pengsida/learning_research
 
 ## License
 

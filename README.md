@@ -2,6 +2,24 @@
 
 [中文介绍](./README_zh.md).
 
+> Important Attribution and Adaptation Notice
+>
+> This repository is adapted from the original `research-paper-writing` skill structure and writing workflow.
+> https://github.com/Master-cai/Research-Paper-Writing-Skills
+> The original writing knowledge and methodology were largely inspired by Prof. Peng Sida's open study notes:
+> https://pengsida.notion.site/c1a22465a0fa4b15a12985223916048e
+>
+> Prof. Peng's original repository:
+> https://github.com/pengsida/learning_research
+>
+> This repository keeps the reusable Skill packaging idea, section-oriented guidance, paragraph-flow checks,
+> claim-evidence alignment, and reviewer-facing self-review workflow, then adapts them for software engineering
+> research papers and top SE venues.
+>
+> Compared with the original general research-paper writing skill, this version reorganizes the content around
+> software engineering paper conventions: research questions, methodology transparency, empirical/software-artifact
+> evidence, evaluation design, threats to validity, reproducibility, and SE reviewer expectations.
+
 This repository provides one Codex-compatible skill package for software engineering research paper writing:
 
 - `se-research-paper-writing/`

@@ -2,52 +2,53 @@
 
 ## Goal
 
-Write Evaluation so reviewers can see that the evidence answers the RQs, supports the contribution claims, and honestly communicates limitations.
+Write Evaluation so reviewers can see exactly how the paper tests its claims. Always begin with Experimental Setup, then organize results by concrete RQs or evaluation questions.
 
-## Evaluation Planning
+## Required Opening: Experimental Setup
 
-For each RQ, define:
+The setup should define:
 
-1. Claim being tested.
-2. Dataset/subjects/tasks.
-3. Baselines or comparison groups.
-4. Metrics and why they matter.
-5. Analysis method.
-6. Expected table/figure.
-7. Threats and mitigation.
+1. Dataset, subjects, cases, participants, projects, tasks, or artifacts.
+2. Baselines and why they are fair.
+3. Metrics and what higher/lower values mean.
+4. Experimental protocol, environment, tool versions, model versions, or hardware when relevant.
+5. Statistical tests, effect sizes, qualitative coding, manual verification, or confidence intervals when relevant.
+6. Reproducibility package or artifact availability.
 
-## Common Evaluation Components
+## RQ-Based Structure
 
-### Experimental Setup
+After setup, write one subsection per RQ or evaluation question:
 
-Describe hardware/software environment, tool versions, model versions, datasets, project selection, task construction, time windows, and replication package.
+1. State the RQ.
+2. Give the short answer first.
+3. Present evidence using tables, figures, numbers, examples, or qualitative categories.
+4. Interpret what the evidence means for the paper's claim.
+5. State boundaries or failure cases when needed.
 
-### Main Results
+## Tool Paper Evaluation
 
-Answer each RQ directly. Start with the takeaway, then provide evidence, then interpret the result.
+Typical evaluation questions:
 
-### Comparison Against Baselines
+1. Effectiveness: does the tool solve the target task better than baselines?
+2. Component contribution: which module/design choice matters?
+3. Scalability and robustness: does it work on larger, noisier, harder, or cross-context data?
+4. Practical value: does it reduce effort, find real bugs, support real investigations, or help users?
+5. Failure cases: when does the tool fail and why?
 
-Use baselines that represent current practice, recent research, simple heuristics, and ablated variants when applicable. Explain why each baseline is fair.
+## Empirical Study Results
 
-### Ablation or Sensitivity Analysis
+Typical result sections:
 
-Use when the paper makes design claims. Show which component, prompt, heuristic, data source, or algorithmic choice contributes to the result.
-
-### Qualitative Analysis
-
-Use when numbers alone cannot explain behavior. Report coding process, examples, categories, and disagreement resolution.
-
-### Failure Cases
-
-Include failure modes when they teach reviewers the boundary of the contribution. Tie failure cases to threats and future work.
+1. Dataset or taxonomy summary.
+2. RQ1 finding with evidence.
+3. RQ2 finding with evidence.
+4. RQ3 finding with evidence.
+5. Implications derived from the findings.
+6. Sensitivity, validation, or robustness checks when needed.
 
 ## Result Paragraph Pattern
 
-1. Takeaway: answer the RQ in one sentence.
-2. Evidence: cite table/figure and key numbers or qualitative categories.
-3. Interpretation: explain why the result matters for the SE problem.
-4. Boundary: state when the result may not hold.
+`RQ[x]: [short answer]. Table/Figure [n] shows [main evidence]. Specifically, [concrete number/result]. This indicates [interpretation], while [boundary/failure case] suggests [scope limitation].`
 
 ## Table and Figure Rules
 
@@ -55,15 +56,14 @@ Include failure modes when they teach reviewers the boundary of the contribution
 2. Label metric direction and units.
 3. Keep numeric precision consistent.
 4. Put statistical significance and effect size near the relevant metric.
-5. Use captions to state setting, subjects, and notation, not long discussion.
+5. Use captions to state setting, subjects, and notation.
 6. Avoid hiding negative or insignificant results.
 
 ## Checklist
 
-1. Does every RQ receive a direct answer?
-2. Are baselines strong, recent, and fair?
-3. Are metrics valid for the SE construct?
-4. Are statistical tests and effect sizes reported when needed?
-5. Are practical implications separated from statistical significance?
-6. Are negative results and failure cases handled honestly?
-7. Are all Abstract/Introduction claims supported by Evaluation evidence?
+1. Does Evaluation start with Experimental Setup?
+2. Is each result subsection tied to one RQ/evaluation question?
+3. Are baselines strong, recent, and fair?
+4. Are metrics valid for the SE construct?
+5. Are all Introduction/Abstract claims supported by numbers, qualitative evidence, or case studies?
+6. Are failure cases and negative results handled honestly?

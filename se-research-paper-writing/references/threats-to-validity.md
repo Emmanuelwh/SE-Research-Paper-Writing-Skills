@@ -2,7 +2,7 @@
 
 ## Goal
 
-Write Threats to Validity as a precise account of what could weaken the claims, how the paper mitigates those risks, and which claims remain bounded.
+Use this standalone guide when Discussion has a dedicated Threats to Validity subsection or when the user asks specifically for validity analysis.
 
 ## Standard Structure
 
@@ -11,40 +11,24 @@ Write Threats to Validity as a precise account of what could weaken the claims, 
 3. External validity: whether results generalize beyond studied projects, languages, tasks, participants, time periods, tools, or organizations.
 4. Conclusion validity: whether statistical, qualitative, or interpretive conclusions are reliable.
 5. Reliability/reproducibility: whether another researcher could repeat the study or reuse the artifact.
-6. Ethical considerations: when human subjects, mined developer data, vulnerabilities, or generated code are involved.
+6. Ethical/security considerations: when human subjects, mined developer data, vulnerabilities, exploits, or generated code are involved.
 
 ## Writing Pattern
 
-For each threat, write:
+`[Threat] may affect [claim]. We mitigate this risk by [mitigation]. However, [remaining boundary], so our conclusion should be interpreted within [scope].`
 
-1. Threat: what could go wrong?
-2. Impact: which claim could be weakened?
-3. Mitigation: what did the paper do to reduce the risk?
-4. Boundary: what uncertainty remains?
+## Tool Paper Threats
 
-## SE-Specific Threat Examples
+Discuss benchmark representativeness, oracle quality, implementation bugs, baseline fairness, configuration sensitivity, deployment assumptions, adversarial adaptation, and scalability limits.
 
-1. Dataset bias: GitHub projects may not represent industrial systems.
-2. Label noise: bug, vulnerability, or code-review labels may be incomplete or inconsistent.
-3. Benchmark leakage: LLMs may have seen public benchmark data.
-4. Oracle validity: generated tests, patches, or classifications may use imperfect ground truth.
-5. Participant bias: survey/interview participants may not represent the broader developer population.
-6. Tool implementation bias: engineering choices may affect performance independently of the core idea.
-7. Temporal validity: repository behavior and tool ecosystems change over time.
-8. Platform bias: GitHub/GitLab/Jira data reflect platform affordances and missing private communication.
+## Empirical Study Threats
 
-## Rules
-
-1. Do not write generic threats that could apply to any paper.
-2. Do not use threats as a place to introduce new results.
-3. Do not over-mitigate; acknowledge remaining uncertainty.
-4. Tie each threat to a concrete claim, dataset, method, or evaluation choice.
-5. Keep the tone honest and controlled: threats bound the contribution rather than destroy it.
+Discuss sampling bias, label noise, construct validity, coder disagreement, missing data, platform bias, participant bias, temporal validity, statistical power, and generalization boundaries.
 
 ## Checklist
 
-1. Are construct/internal/external/conclusion validity covered when applicable?
-2. Are SE-specific datasets, subjects, and metrics discussed?
-3. Are LLM, human-subject, security, or repository-mining risks addressed when relevant?
-4. Does each threat include mitigation and remaining boundary?
-5. Are claims in Abstract/Introduction scoped according to the threats?
+1. Is every threat tied to a concrete claim?
+2. Does every threat include mitigation and remaining boundary?
+3. Are generic threats replaced with paper-specific risks?
+4. Are Abstract and Introduction claims scoped according to these threats?
+5. Is reproducibility addressed when artifacts or data are central?

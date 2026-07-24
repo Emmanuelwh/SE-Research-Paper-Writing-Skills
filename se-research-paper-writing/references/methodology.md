@@ -2,65 +2,57 @@
 
 ## Goal
 
-Write Methodology so reviewers can judge whether the study or technique is sound, reproducible, and aligned with the research questions.
+Write Methodology so reviewers can understand the full design before reading details. Always start with an overall overview, then write concrete subsections for modules, study phases, algorithms, data processing steps, or analysis components.
 
-## Pre-Writing Questions
+## Required Opening: Overall Overview
 
-1. What are the research questions or evaluation goals?
-2. What paper type is this: empirical study, tool/system, program analysis/testing, MSR, LLM4SE, or security-for-SE?
-3. What are the subjects: projects, commits, issues, bugs, vulnerabilities, tests, participants, tasks, or benchmarks?
-4. How were subjects selected, filtered, and cleaned?
-5. What variables, labels, metrics, or constructs are operationalized?
-6. What procedure was followed step by step?
-7. What baselines, comparison groups, or controls are used?
-8. What analysis method is used: statistical test, effect size, qualitative coding, thematic analysis, manual inspection, or case study?
-9. What artifacts are available for replication?
+The first Methodology subsection should answer:
 
-## Core Structure
+1. What is the input?
+2. What is the output?
+3. What are the main stages/components?
+4. Which challenge or RQ does each stage address?
+5. How does information flow from one stage to the next?
 
-1. RQs or study goals.
-2. Subject/data selection.
-3. Data collection and preprocessing.
-4. Method/tool/system design or study procedure.
-5. Measures, metrics, labels, and operational definitions.
-6. Analysis method.
-7. Implementation and reproducibility details.
+Use a figure or pipeline table when the method has multiple modules.
 
-## Paper-Type Guidance
+## Tool Paper Structure
 
-### Empirical Study
+1. Overview: full workflow, inputs, outputs, and challenge mapping.
+2. Problem formulation or design goals.
+3. Component 1: motivation, input, operation, output, and addressed challenge.
+4. Component 2: motivation, input, operation, output, and addressed challenge.
+5. Component 3 or integration/fusion/decision module.
+6. Implementation details and reproducibility notes.
 
-Include sampling strategy, inclusion/exclusion criteria, data cleaning, coding protocol, inter-rater agreement when applicable, statistical tests, effect sizes, and ethics/consent when human subjects are involved.
+## Empirical Study Structure
 
-### Tool/System Paper
+1. Study overview: RQs, data sources, and analysis pipeline.
+2. Data collection: sources, time window, sampling, inclusion/exclusion criteria.
+3. Data preprocessing: cleaning, filtering, deduplication, normalization, labeling.
+4. Measurement or operationalization: variables, constructs, metrics, coding scheme.
+5. Analysis method: statistical analysis, qualitative coding, manual inspection, case study, or mixed methods.
+6. Reproducibility: artifacts, scripts, annotation protocol, prompts, and replication package.
 
-Include design goals, architecture, workflow integration, implementation details, required inputs/outputs, failure behavior, and reproducibility package. Make clear what is an engineering design decision and what is a research contribution.
+## Component Writing Pattern
 
-### Program Analysis, Testing, or Verification
+For each component/subsection, write:
 
-Include problem formulation, assumptions, algorithm steps, soundness/precision tradeoffs, implementation choices, benchmark construction, oracle definition, and scalability considerations.
+1. Motivation: why this component is needed.
+2. Input: what data/artifact/state it receives.
+3. Design: how it works.
+4. Output: what it produces.
+5. Link: how the output feeds the next component or answers an RQ.
+6. Advantage: why this design addresses the stated challenge.
 
-### MSR Paper
+## Semi-Template
 
-Include repository selection, data extraction APIs, time window, deduplication, bot filtering, label construction, missing-data handling, and bias introduced by platform behavior.
+`Given [input], the overview pipeline first [stage 1] to produce [output 1], then [stage 2] to address [challenge/RQ], and finally [stage 3] to generate [final output]. Section [x] describes [component 1], Section [y] describes [component 2], and Section [z] explains [integration/analysis].`
 
-### LLM4SE Paper
+## Checklist
 
-Include model versions, prompts, decoding parameters, context construction, data leakage controls, benchmark contamination concerns, human evaluation protocol, and cost/reliability considerations.
-
-## Writing Rules
-
-1. Present Methodology before results; do not smuggle results into procedure descriptions.
-2. Define constructs before measuring them.
-3. Make every metric interpretable: what does a higher value mean and why does it answer the RQ?
-4. State exclusions transparently and justify them.
-5. Use tables for datasets, subject systems, RQs, metrics, and baselines when they reduce ambiguity.
-
-## Methodology Checklist
-
-1. Can a reviewer reproduce the study design from this section?
-2. Does each RQ have a corresponding method and analysis?
-3. Are subject selection and filtering criteria explicit?
-4. Are metrics and labels valid proxies for the intended constructs?
-5. Are baselines fair and relevant?
-6. Are ethical and reproducibility details included when needed?
+1. Does Methodology begin with an overview?
+2. Does every challenge/RQ from Introduction map to a method or study-design element?
+3. Are inputs and outputs explicit for every major step?
+4. Are data collection, preprocessing, labels, metrics, and analysis methods clear when this is an Empirical Study?
+5. Are implementation and reproducibility details sufficient for reviewer trust?

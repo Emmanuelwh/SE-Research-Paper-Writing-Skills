@@ -6,72 +6,45 @@ Review an SE paper as a skeptical program committee member before submission. Id
 
 ## Reviewer Core Questions
 
-1. SE relevance: Is the paper solving a software engineering problem, not only applying a technique to code data?
-2. Novelty: What is new compared with prior SE work and current practice?
-3. Significance: Who benefits, and is the benefit important enough for the venue?
-4. Methodological soundness: Are RQs, subjects, data collection, metrics, baselines, and analysis justified?
-5. Evidence strength: Do results support the claims at the right scope?
-6. Validity: Are threats identified, mitigated, and reflected in claim wording?
-7. Reproducibility: Are artifacts, datasets, scripts, prompts, or protocols available or sufficiently described?
-8. Clarity: Can reviewers summarize the paper's story after one reading?
-
-## Five-Dimension Self-Review
-
-### 1) Contribution
-
-1. What exactly is contributed: finding, tool, technique, benchmark, dataset, taxonomy, theory, or replication?
-2. Is each contribution named in the Introduction and supported later?
-3. Are contribution boundaries explicit?
-
-### 2) Writing Clarity
-
-1. Does each section have one clear role?
-2. Does each paragraph have one message?
-3. Are RQs, terms, metrics, and claims consistent across sections?
-
-### 3) Methodology Soundness
-
-1. Are RQs answerable with the chosen study design?
-2. Are subject selection and filtering criteria justified?
-3. Are labels, metrics, baselines, and procedures valid?
-
-### 4) Evaluation Completeness
-
-1. Does each RQ receive direct evidence?
-2. Are baselines and comparisons fair?
-3. Are statistical, qualitative, or case-study analyses appropriate?
-4. Are failure cases and negative results explained?
-
-### 5) Validity and Reproducibility
-
-1. Are construct, internal, external, and conclusion validity threats discussed when applicable?
-2. Are claims scoped according to the evidence?
-3. Can another researcher replicate or inspect the artifact/study?
+1. SE relevance: Is the paper solving a real software engineering problem?
+2. Paper type: Is the paper clearly a Tool Paper or an Empirical Study?
+3. Story alignment: Do Abstract, Introduction, Methodology, Evaluation, Discussion, and Conclusion tell the same story?
+4. Background sufficiency: Are concepts, problem statement, and threat model clear enough?
+5. Challenge-method alignment: Does each challenge map to a method or study design?
+6. RQ-evidence alignment: Does each RQ receive direct evidence?
+7. Evidence strength: Do datasets, baselines, metrics, numbers, qualitative findings, or case studies support the claims?
+8. Discussion and threats: Are limitations specific and reflected in claim wording?
+9. Reproducibility: Are artifacts, datasets, scripts, prompts, or protocols available or sufficiently described?
+10. Clarity: Can reviewers summarize the contribution after one reading?
 
 ## Claim-Evidence Audit
 
 For every major claim in Abstract and Introduction, write:
 
-`Claim: ... | Evidence: ... | Section/Table/Figure: ... | Threat: ... | Status: supported/needs evidence/overclaimed`
+`Claim: ... | Evidence: ... | Section/Table/Figure: ... | Threat/Boundary: ... | Status: supported/needs evidence/overclaimed`
 
-Revise all `overclaimed` statements before finalizing.
+## Challenge-Method-Evaluation Audit
 
-## Common SE Rejection Risks
+For every challenge or RQ, write:
 
-1. The paper lacks a clear SE problem and reads like generic ML/AI applied to software artifacts.
-2. RQs are listed but do not structure Methodology and Evaluation.
-3. Dataset or benchmark construction is underspecified.
-4. Metrics are convenient but not valid proxies for the claimed construct.
-5. Baselines are weak, outdated, unfair, or missing.
-6. Threats to validity are generic and do not bound the actual claims.
-7. Contributions are stated as novelty claims without evidence of usefulness or insight.
-8. The artifact is central but not available or not described enough to evaluate.
-9. Related Work lists papers but does not establish the gap.
-10. Abstract/Introduction claims are stronger than Evaluation supports.
+`Challenge/RQ: ... | Method/Study Design: ... | Evaluation Evidence: ... | Discussion/Threat: ... | Status: aligned/missing/overclaimed`
+
+## Common Rejection Risks
+
+1. Paper type is unclear: the work is neither a convincing tool paper nor a convincing empirical study.
+2. Background is too thin for reviewers to understand the task or threat model.
+3. Motivating example does not demonstrate why current solutions fail.
+4. Challenges are listed but not addressed by Methodology.
+5. Methodology lacks an overview or input-output workflow.
+6. Evaluation lacks experimental setup or is not organized by RQ.
+7. Results use vague claims without concrete numbers or evidence.
+8. Discussion contains generic threats rather than claim-specific boundaries.
+9. Related Work lists papers without positioning.
+10. Conclusion overstates implications beyond the evidence.
 
 ## Adversarial Review Workflow
 
 1. Write the harshest plausible reviewer summary.
 2. List the top five reasons for rejection.
-3. Map each reason to a fix: rewrite, add evidence, weaken claim, clarify threat, or improve positioning.
+3. Map each reason to a fix: rewrite, add evidence, weaken claim, clarify threat, improve positioning, or restructure a section.
 4. Revise the paper and repeat until no high-risk issue remains unresolved.

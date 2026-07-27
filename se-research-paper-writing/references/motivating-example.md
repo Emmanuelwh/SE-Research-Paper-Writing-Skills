@@ -137,6 +137,7 @@ Use these only when they fit the paper; they are not required categories.
 - Semantic or contextual ambiguity: useful when the method must recover meaning, intent, state, dependency, or context from indirect evidence.
 - Multiple evidence sources: useful when no single artifact, signal, or view is enough.
 - Minimal artifact example: useful when a small program, input, test, log, configuration, prompt, or trace can expose the key difficulty.
+
 ## Empirical Study Patterns
 
 ### Preliminary Observation

@@ -48,6 +48,7 @@ The overview must answer:
 2. Input and output: specify the input boundary and final output boundary.
 3. Pipeline figure: point to Figure X and name the major modules in execution order.
 4. Section map: explain what each Methodology subsection covers and how its output feeds the next one.
+5. Requirement map: briefly connect major modules to the challenges or design requirements introduced earlier.
 
 ### Complete Tool Figure
 

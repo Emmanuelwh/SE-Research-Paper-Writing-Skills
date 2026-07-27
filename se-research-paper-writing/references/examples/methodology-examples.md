@@ -7,7 +7,7 @@ Use this file as the entry point for Methodology examples. Read `references/meth
 Use these for papers whose main contribution is a tool, analyzer, detector, repair technique, testing framework, auditing workflow, benchmarked pipeline, or LLM4SE system.
 
 1. Tool overview and complete figure example: `references/examples/methodology/tool-overview-example.md`
-2. Module subsection and step-level implementation example: `references/examples/methodology/module-subsection-example.md`
+2. Module subsection and technical-unit details: `references/examples/methodology/module-subsection-example.md`
 
 ## Tool Paper Overview Mini-Pattern
 

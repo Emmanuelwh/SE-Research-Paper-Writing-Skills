@@ -72,7 +72,6 @@ Load only the needed section file:
 
 Auxiliary guides:
 
-- Standalone Threats to Validity details: `references/threats-to-validity.md`
 - Paper review and pre-submission self-check: `references/paper-review.md`
 - Paragraph clarity source: `references/does-my-writing-flow-source.md`
 - Example bank index: `references/examples/index.md`

@@ -10,8 +10,10 @@ Use examples to reuse writing logic, not exact wording.
    - Tool overview and complete figure: `references/examples/methodology/tool-overview-example.md`
    - Module subsection and step details: `references/examples/methodology/module-subsection-example.md`
 4. Evaluation examples: `references/examples/evaluation-examples.md`
-5. Threats to Validity examples: `references/examples/threats-to-validity-examples.md`
-6. Reviewer checklist examples: `references/examples/reviewer-checklist-examples.md`
+   - Tool Paper RQ design: `references/examples/evaluation/rq-design-tool-paper.md`
+   - Experimental setup: `references/examples/evaluation/experimental-setup-example.md`
+   - RQ result analysis: `references/examples/evaluation/rq-result-analysis-example.md`
+5. Discussion and Threats to Validity examples: `references/examples/discussion-examples.md`
 
 ## Usage
 

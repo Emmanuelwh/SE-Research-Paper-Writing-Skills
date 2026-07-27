@@ -5,7 +5,8 @@
 > Important Attribution and Adaptation Notice
 >
 > This repository is adapted from the original `research-paper-writing` skill structure and writing workflow.
-> https://github.com/Master-cai/Research-Paper-Writing-Skills
+> https://github.com/Master-cai/Research-Paper-Writing-Skills.
+>
 > The original writing knowledge and methodology were largely inspired by Prof. Peng Sida's open study notes:
 > https://pengsida.notion.site/c1a22465a0fa4b15a12985223916048e
 >

@@ -7,6 +7,8 @@ Use examples to reuse writing logic, not exact wording.
 1. Abstract examples: `references/examples/abstract-examples.md`
 2. Introduction examples: `references/examples/introduction-examples.md`
 3. Methodology examples: `references/examples/methodology-examples.md`
+   - Tool overview and complete figure: `references/examples/methodology/tool-overview-example.md`
+   - Module subsection and step details: `references/examples/methodology/module-subsection-example.md`
 4. Evaluation examples: `references/examples/evaluation-examples.md`
 5. Threats to Validity examples: `references/examples/threats-to-validity-examples.md`
 6. Reviewer checklist examples: `references/examples/reviewer-checklist-examples.md`

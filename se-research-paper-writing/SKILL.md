@@ -76,8 +76,8 @@ Auxiliary guides:
 - Paper review and pre-submission self-check: `references/paper-review.md`
 - Paragraph clarity source: `references/does-my-writing-flow-source.md`
 - Example bank index: `references/examples/index.md`
-- Compatibility note for old Method prompts: `references/method.md`
-- Compatibility note for old Experiments prompts: `references/experiments.md`
+
+Use the current SE section guides above as the only navigation surface. Do not route section work through legacy compatibility notes from the earlier general paper-writing skill.
 
 ## Paper-Type Routing
 
